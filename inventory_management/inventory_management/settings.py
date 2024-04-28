@@ -18,7 +18,7 @@ SECRET_KEY = 'django-insecure-(u40*pkhvs550-9f3b&ok#(-on_alr36kt!c%+w(1929rcx$jf
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app']
 
 INSTALLED_APPS = [
     'inventory',
@@ -59,8 +59,6 @@ TEMPLATES = [
         },
     },
 ]
-
-WSGI_APPLICATION = 'inventory_management.wsgi.application'
 
 DATABASES = {
     'default': {
