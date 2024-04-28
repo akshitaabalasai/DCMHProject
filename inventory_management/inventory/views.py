@@ -7,6 +7,8 @@ from .forms import UserRegisterForm, InventoryItemForm
 from .models import InventoryItem, Category
 from inventory_management.settings import LOW_QUANTITY
 from django.contrib import messages
+from django.contrib.auth.views import LogoutView
+
 
 class Index(TemplateView):
     template_name = 'inventory/index.html'
