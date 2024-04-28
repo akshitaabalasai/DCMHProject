@@ -1,5 +1,6 @@
 .InventoryButton {
     margin-top: 3rem;
+    margin: 0 20px;
     padding: 1rem 2rem;
     background: var(--blue-sky);
     color: var(--white);

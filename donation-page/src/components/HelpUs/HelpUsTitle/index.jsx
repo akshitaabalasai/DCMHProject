@@ -2,7 +2,7 @@ import classes from './HelpUsTitle.module.css'
 
 const HelpUsTitle = () => (
   <header className={classes.HelpUsTitle}>
-    <h1>Help us do more</h1>
+    <h1>DCMH Donation Page</h1>
   </header>
 );
 
