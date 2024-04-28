@@ -1,14 +1,22 @@
 from django.shortcuts import render, redirect
 from django.views.generic import TemplateView, View
 from django.contrib.auth import authenticate, login
+from .forms import UserRegisterForm
+from .models import InventoryItem
 
 class Index(TemplateView):
     template_name = 'inventory/index.html'
+    
+class Dashboard(View):
+    def get(self, request):
+        items = InventoryItem.objects.filter(user=self.request.user.id).order_by('id')
+        return render(request, 'inventory/dashboard.html', {'items': items})  # Added comma here
 
 class SignUpView(View):
     def get(self, request):
         form = UserRegisterForm()
         return render(request, 'inventory/signup.html', {'form': form})
+    
     def post(self, request):
         form = UserRegisterForm(request.POST)
         
